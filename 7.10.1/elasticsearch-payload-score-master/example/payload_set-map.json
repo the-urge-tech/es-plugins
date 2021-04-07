@@ -29,7 +29,6 @@
     }
   },
   "mappings": {
-    "_doc": {
       "properties": {
         "key": {
           "type": "text",
@@ -37,7 +36,6 @@
           "term_vector": "with_positions_offsets_payloads",
           "store" : true
         }
-      }
     }
   }
 }
