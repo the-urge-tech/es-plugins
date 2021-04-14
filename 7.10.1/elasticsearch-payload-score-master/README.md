@@ -1,11 +1,11 @@
 # elasticsearch-payload-score
-Score documents with payload in elasticsearch 6.5
+Score documents with payload in elasticsearch 7.10.1
 
-document : http://www.irgroup.org/payload-score-in-elasticsearch-6.5/
+previous version document : http://www.irgroup.org/payload-score-in-elasticsearch-6.5/
 
 ## Releases
 2018-11-22 `6.5.0-b1` targets elasticsearch 6.5.0
-
+2021-04-04 `7.10.1-b1` targets elasticsearch 7.10.1
 ## Overview
 
 
