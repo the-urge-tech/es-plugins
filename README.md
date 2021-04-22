@@ -1,10 +1,8 @@
-Payloads Plugin for Elasticsearch
-====================================
 # elasticsearch-payload-score
-Score documents with payload in elasticsearch 7.10.1
+Score documents with payload in elasticsearch 7.12.0
 
 ## Releases
-2021-04-22 `7.10.1` targets elasticsearch 7.10.1
+2021-04-22 `7.12.0` targets elasticsearch 7.12.0
 
 ## Overview
 
@@ -27,7 +25,7 @@ return sum_payload;
 ```
 
 ## Plugin installation
-Target elasticsearch version is 7.10.1 and java 1.11
+Target elasticsearch version is 7.12.0 and java 1.8
 
 ## Example
 
@@ -106,8 +104,8 @@ curl -H 'Content-Type: application/json' -X POST 'localhost:9200/payload-test/_s
         {
           "script_score": {
             "script": {
-                "source": "payload",
-                "lang" : "payload",
+                "source": "payload_score",
+                "lang" : "irgroup",
                 "params": {
                     "field": "key",
                     "term": "yellow"
