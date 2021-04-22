@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="payload_score-7-10.1-b1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/7.10.1/elasticsearch-payload-score-master/releases/payload_score-7-10.1-b1.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
