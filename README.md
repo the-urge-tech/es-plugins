@@ -1,3 +1,5 @@
+![test](https://github.com/the-urge-tech/es-plugins/actions/workflows/test.yml/badge.svg)
+
 # elasticsearch-payload-score
 Score documents with payload in elasticsearch 7.10.1
 
