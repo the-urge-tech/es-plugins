@@ -23,7 +23,6 @@ import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.script.Script;
 import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.test.ESIntegTestCase;
-import org.junit.Test;
 
 import java.io.IOException;
 import java.util.*;
@@ -33,7 +32,7 @@ import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertAcke
 import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertHitCount;
 
 @ESIntegTestCase.ClusterScope(scope = ESIntegTestCase.Scope.SUITE, transportClientRatio = 0, numDataNodes = 1, numClientNodes = 0)
-public class PayloadsPluginIT extends ESIntegTestCase {
+public class PayloadsPluginIntegrationTest extends ESIntegTestCase {
 
     @Override
     protected Settings nodeSettings(int nodeOrdinal) {
@@ -45,7 +44,7 @@ public class PayloadsPluginIT extends ESIntegTestCase {
     protected Collection<Class<? extends Plugin>> nodePlugins() {
         return Arrays.asList(
                 MockPayloadAnalyzerPlugin.class,
-                PayloadsPlugin.class
+                PayloadScorePlugin.class
         );
     }
 

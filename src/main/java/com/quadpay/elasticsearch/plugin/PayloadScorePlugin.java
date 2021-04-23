@@ -14,7 +14,6 @@
 
 package com.quadpay.elasticsearch.plugin;
 
-import com.quadpay.elasticsearch.plugin.PayloadScoreFactory;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.plugins.ScriptPlugin;
@@ -27,7 +26,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * payload score ranking plugin. only Elasticsearch 6.5 or higher
+ * payload score ranking plugin
  */
 public class PayloadScorePlugin extends Plugin implements ScriptPlugin {
 
@@ -37,8 +36,8 @@ public class PayloadScorePlugin extends Plugin implements ScriptPlugin {
 	}
 
 	private static class WmpScriptEngine implements ScriptEngine {
-		private final String _SOURCE_VALUE = "payload_score";
-		private final String _LANG_VALUE = "irgroup";
+		private final String _SOURCE_VALUE = "payload";
+		private final String _LANG_VALUE = "payload";
 
 		@Override
 		public String getType() {
