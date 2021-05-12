@@ -1,0 +1,47 @@
+{
+  "ltr.delete_model": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/_model/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The model name"
+            }
+          },
+          "methods": [
+            "DELETE"
+          ]
+        },
+        {
+          "path": "/_ltr/{store}/_model/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The model name"
+            },
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "body": null,
+    "params": {
+      "routing": {
+        "type": "string",
+        "description": "Specific routing value"
+      }
+    }
+  }
+}

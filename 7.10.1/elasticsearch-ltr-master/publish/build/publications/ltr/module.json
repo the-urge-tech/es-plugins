@@ -1,0 +1,203 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.o19s",
+    "module": "elasticsearch-learning-to-rank",
+    "version": "1.5.4-es7.10.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.8.3",
+      "buildId": "7ywqwgbqjbghhfplqpnuzfn5jq"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.lucene",
+          "module": "lucene-expressions",
+          "version": {
+            "requires": "8.7.0"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr4-runtime",
+          "version": {
+            "requires": "4.5.1-1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "com.o19s",
+          "module": "RankyMcRankFace",
+          "version": {
+            "requires": "0.1.1"
+          }
+        },
+        {
+          "group": "com.github.spullara.mustache.java",
+          "module": "compiler",
+          "version": {
+            "requires": "0.9.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "elasticsearch-learning-to-rank-1.5.4-es7.10.1.jar",
+          "url": "elasticsearch-learning-to-rank-1.5.4-es7.10.1.jar",
+          "size": 392615,
+          "sha512": "348affcccd2c81ad623776ceb8b5f7810131f37375cd745722cdb20ff828c05e0d0d5236d3e0189012497efdb698b4aec59b1cb9f32910790fac682bfa80aaa8",
+          "sha256": "c7bfbdee9890f23babf8b41ecd44715056dd81f15587b5e0fb4a5b7e4964d6e9",
+          "sha1": "bab7c0accac850a853ad583bc8fb6a13db81c3f0",
+          "md5": "2b9bdd6ad54161182053cffde58d0445"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.lucene",
+          "module": "lucene-expressions",
+          "version": {
+            "requires": "8.7.0"
+          }
+        },
+        {
+          "group": "org.antlr",
+          "module": "antlr4-runtime",
+          "version": {
+            "requires": "4.5.1-1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-tree",
+          "version": {
+            "requires": "8.0.1"
+          }
+        },
+        {
+          "group": "com.o19s",
+          "module": "RankyMcRankFace",
+          "version": {
+            "requires": "0.1.1"
+          }
+        },
+        {
+          "group": "com.github.spullara.mustache.java",
+          "module": "compiler",
+          "version": {
+            "requires": "0.9.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "elasticsearch-learning-to-rank-1.5.4-es7.10.1.jar",
+          "url": "elasticsearch-learning-to-rank-1.5.4-es7.10.1.jar",
+          "size": 392615,
+          "sha512": "348affcccd2c81ad623776ceb8b5f7810131f37375cd745722cdb20ff828c05e0d0d5236d3e0189012497efdb698b4aec59b1cb9f32910790fac682bfa80aaa8",
+          "sha256": "c7bfbdee9890f23babf8b41ecd44715056dd81f15587b5e0fb4a5b7e4964d6e9",
+          "sha1": "bab7c0accac850a853ad583bc8fb6a13db81c3f0",
+          "md5": "2b9bdd6ad54161182053cffde58d0445"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "elasticsearch-learning-to-rank-1.5.4-es7.10.1-javadoc.jar",
+          "url": "elasticsearch-learning-to-rank-1.5.4-es7.10.1-javadoc.jar",
+          "size": 689979,
+          "sha512": "88450547e71d0521e7cc2abca20bc250c446b0af4ed60c30e44681e25b0321c74d2d00d3ea5abd54d95fd640cf6ef556133288947115bb0202dfafc9ad8e7f69",
+          "sha256": "d32c9792a25293753a21365c65e7f4b729551e096fe85ae5a104d88fd01400a7",
+          "sha1": "97537b1ad792bfe0b6d93efd42f8c7515c9cd8cc",
+          "md5": "623b9ca4bb4224e76950bcad6b84750f"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "elasticsearch-learning-to-rank-1.5.4-es7.10.1-sources.jar",
+          "url": "elasticsearch-learning-to-rank-1.5.4-es7.10.1-sources.jar",
+          "size": 171001,
+          "sha512": "57f7846fffa6e317244b716d0ad16259475de050dc170d233a3d2d2c53cc34b693904c8d2e6703688754ac8bf938d053dfdd20213e0d41759cf1a24f0cb37bae",
+          "sha256": "35940c4fd806eeb8caf5ad27537160d20479c0fd1c11cf5d7f9e56841f29f184",
+          "sha1": "746d1b5bb52a528db89ec809bfd49ce5c4741934",
+          "md5": "e93e0ec5b96b48ef941093d171dcb57d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "ltr.delete_featureset": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            }
+          },
+          "methods": [
+            "DELETE"
+          ]
+        },
+        {
+          "path": "/_ltr/{store}/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            },
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "DELETE"
+          ]
+        }
+      ]
+    },
+    "body": null,
+    "params": {
+      "routing": {
+        "type": "string",
+        "description": "Specific routing value"
+      }
+    }
+  }
+}

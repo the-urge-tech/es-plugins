@@ -1,0 +1,46 @@
+{
+  "ltr.list_featureset": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/_featureset",
+          "methods": [
+            "GET"
+          ]
+        },
+        {
+          "path": "/_ltr/{store}/_featureset",
+          "parts": {
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "body": null,
+    "params": {
+      "prefix": {
+        "required": false,
+        "type": "string",
+        "description": "Filter elements by name prefix"
+      },
+      "from": {
+        "required": false,
+        "type": "integer",
+        "description": "Page results"
+      },
+      "size": {
+        "required": false,
+        "type": "integer",
+        "description": "Page size"
+      }
+    }
+  }
+}

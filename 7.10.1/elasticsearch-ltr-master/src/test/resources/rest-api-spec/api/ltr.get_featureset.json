@@ -1,0 +1,41 @@
+{
+  "ltr.get_featureset": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            }
+          },
+          "methods": [
+            "GET"
+          ]
+        },
+        {
+          "path": "/_ltr/{store}/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            },
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "GET"
+          ]
+        }
+      ]
+    },
+    "body": null
+  }
+}

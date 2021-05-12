@@ -1,0 +1,29 @@
+{
+  "ltr.clear_cache": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/{store}/_clearcache",
+          "parts": {
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "path": "/_ltr/_clearcache",
+          "methods": [
+            "POST"
+          ]
+        }
+      ]
+    },
+    "body": null
+  }
+}

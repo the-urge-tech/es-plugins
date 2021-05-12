@@ -1,0 +1,18 @@
+{
+  "analysis": {
+    "analyzer": {
+      "name_prefix": {
+        "tokenizer": "ltr_keyword",
+        "filter": [
+          "ltr_edge_ngram"
+        ]
+      },
+      "name_prefix_search": {
+        "tokenizer": "ltr_keyword",
+        "filter": [
+          "ltr_length"
+        ]
+      }
+    }
+  }
+}

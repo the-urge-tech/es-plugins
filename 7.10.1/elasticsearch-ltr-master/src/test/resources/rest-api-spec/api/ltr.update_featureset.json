@@ -1,0 +1,50 @@
+{
+  "ltr.update_featureset": {
+    "stability": "stable",
+    "url": {
+      "paths": [
+        {
+          "path": "/_ltr/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            }
+          },
+          "methods": [
+            "POST"
+          ]
+        },
+        {
+          "path": "/_ltr/{store}/_featureset/{name}",
+          "parts": {
+            "name": {
+              "required": true,
+              "type": "string",
+              "description": "The featureset name"
+            },
+            "store": {
+              "required": false,
+              "type": "string",
+              "description": "The store name"
+            }
+          },
+          "methods": [
+            "POST"
+          ]
+        }
+      ]
+    },
+    "body": {
+      "required": "true",
+      "description": "The featureset"
+    },
+    "params": {
+      "routing": {
+        "type": "string",
+        "description": "Specific routing value"
+      }
+    }
+  }
+}
