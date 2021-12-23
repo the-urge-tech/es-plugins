@@ -18,6 +18,8 @@ import org.apache.lucene.index.LeafReaderContext;
 import org.apache.lucene.index.PostingsEnum;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.util.BytesRef;
+import org.elasticsearch.script.DocReader;
+import org.elasticsearch.script.DocValuesDocReader;
 import org.elasticsearch.script.ScoreScript;
 import org.elasticsearch.search.lookup.SearchLookup;
 
@@ -54,12 +56,14 @@ public final class PayloadScoreFactory implements ScoreScript.LeafFactory {
 	}
 
 	@Override
-	public ScoreScript newInstance(LeafReaderContext context) throws IOException {
+	public ScoreScript newInstance(DocReader reader) throws IOException {
 
-		PostingsEnum postings = context.reader().postings(new Term(field, term), PostingsEnum.PAYLOADS);
+		PostingsEnum postings = ((DocValuesDocReader) reader).
+				getLeafReaderContext().reader().
+				postings(new Term(field, term), PostingsEnum.PAYLOADS);
 
 		if (postings == null) {
-			return new ScoreScript(params, lookup, context) {
+			return new ScoreScript(params, lookup, reader) {
 				@Override
 				public double execute(ExplanationHolder explanation) {
 					return 0.0d;
@@ -67,7 +71,7 @@ public final class PayloadScoreFactory implements ScoreScript.LeafFactory {
 			};
 		}
 
-		return new ScoreScript(params, lookup, context) {
+		return new ScoreScript(params, lookup, reader) {
 			int currentDocId = -1;
 
 			@Override

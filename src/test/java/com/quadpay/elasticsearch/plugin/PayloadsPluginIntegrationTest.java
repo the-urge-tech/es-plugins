@@ -11,8 +11,6 @@ import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.PayloadAttribute;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.xcontent.XContentBuilder;
-import org.elasticsearch.common.xcontent.XContentFactory;
 import org.elasticsearch.index.analysis.PreConfiguredTokenizer;
 import org.elasticsearch.index.analysis.TokenFilterFactory;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -23,11 +21,12 @@ import org.elasticsearch.plugins.Plugin;
 import org.elasticsearch.script.Script;
 import org.elasticsearch.script.ScriptType;
 import org.elasticsearch.test.ESIntegTestCase;
+import org.elasticsearch.xcontent.XContentBuilder;
+import org.elasticsearch.xcontent.XContentFactory;
 
 import java.io.IOException;
 import java.util.*;
 
-import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertAcked;
 import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertHitCount;
 
@@ -35,8 +34,8 @@ import static org.elasticsearch.test.hamcrest.ElasticsearchAssertions.assertHitC
 public class PayloadsPluginIntegrationTest extends ESIntegTestCase {
 
     @Override
-    protected Settings nodeSettings(int nodeOrdinal) {
-        return Settings.builder().put(super.nodeSettings(nodeOrdinal))
+    protected Settings nodeSettings(int nodeOrdinal, Settings otherSettings) {
+        return Settings.builder().put(super.nodeSettings(nodeOrdinal, otherSettings))
                 .build();
     }
 
@@ -75,15 +74,15 @@ public class PayloadsPluginIntegrationTest extends ESIntegTestCase {
         ensureGreen("test1");
 
         client().prepareIndex("test1", "_doc", "1")
-                .setSource(jsonBuilder().startObject().field("name", "foo|123 bar|2").endObject())
+                .setSource(XContentFactory.jsonBuilder().startObject().field("name", "foo|123 bar|2").endObject())
                 .get();
 
         client().prepareIndex("test1", "_doc", "2")
-                .setSource(jsonBuilder().startObject().field("name", "foo|10000000 bar|123 baz").endObject())
+                .setSource(XContentFactory.jsonBuilder().startObject().field("name", "foo|10000000 bar|123 baz").endObject())
                 .get();
 
         client().prepareIndex("test1", "_doc", "3")
-                .setSource(jsonBuilder().startObject().field("name", "foo|0").endObject())
+                .setSource(XContentFactory.jsonBuilder().startObject().field("name", "foo|0").endObject())
                 .get();
 
         refresh();

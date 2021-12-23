@@ -6,6 +6,8 @@ Score documents with payload in elasticsearch 7.10.1
 ## Releases
 2021-04-22 `7.10.1` targets elasticsearch 7.10.1
 
+2021-12-23 `7.16.2` targets elasticsearch 7.16.2
+
 ## Overview
 
 
@@ -27,7 +29,7 @@ return sum_payload;
 ```
 
 ## Plugin installation
-Target elasticsearch version is 7.10.1
+Target elasticsearch version is 7.16.2
 
 ## Example
 
